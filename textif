@@ -1,15 +1,18 @@
-# -*- coding:utf-8 -*-
-H=1.75
-W=80.5
-B=W/(H*H)
-print(B)
-if B<18.5:
-	print('过轻')
-elif B>=18.5 and B<25:
-	print('正常')
-elif B>=25 and B<28:
-	print('过重')
-elif B>=28 and B<32:
-	print('肥胖')
+# -*- coding: utf-8 -*-
+
+height = 1.75
+weight = 80.5
+a=weight/height**2
+b='%.1f'%a
+bmi=float(b)
+print(b)
+if bmi>=32:
+    print('过渡肥胖')
+elif bmi<32 and bmi>=28:
+    print('肥胖')
+elif bmi<28 and bmi>=25:
+    print('过重')
+elif bmi<25 and bmi>=18.5:
+    print('正常')
 else:
-	print('严重肥胖')
+    print('过轻')
